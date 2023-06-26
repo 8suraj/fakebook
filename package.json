@@ -1,0 +1,17 @@
+{
+	"name": "fakebook",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"install-server": "npm install --prefix fakebook-server",
+		"install-client": "npm install --prefix fakebook-client",
+		"install": "npm run install-server && npm run install-client",
+		"client": "npm run dev --prefix fakebook-client",
+		"server": "npm run watch --prefix fakebook-server",
+		"deploy": "npm run build --prefix fakebook-client && npm start --prefix fakebook-server"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

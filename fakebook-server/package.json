@@ -1,0 +1,13 @@
+{
+	"name": "fakebook-server",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src/server.js",
+		"watch": "nodemon src/server.js"
+	},
+	"author": "suraj",
+	"license": "ISC",
+	"keywords": [],
+	"description": ""
+}
