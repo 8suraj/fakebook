@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*nav */
+.abs {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.notificationAbs {
+	transform: translateY(20%);
+}
+/* profilheader */
+.trans {
+	transform: translateY(-5vh);
+	z-index: 2;
+}
+.trans1 {
+	transform: translateY(-10%);
+}
+/* .trans3 {
+	transform: translateY(-0%);
+} */
+body {
+	background-color: #f0f2f5;
+}
+.abs50 {
+	transform: translateY(-50%);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.photoGrid {
+	/* @apply xl:w-24 xl:h-24 2xl:w-36 2xl:h-36; */
+	width: calc((100%- (gap-3 * 3)) / 3);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.profileContainers {
+	@apply border-transparent rounded-lg bg-white flex flex-col p-4 drop-shadow-md	my-4;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.greyButtonWithHover {
+	@apply border border-gray-100  bg-gray-200  hover:bg-gray-300;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.greyOnHover {
+	@apply hover:bg-gray-100;
+}
+.greyOnHover1 {
+	@apply hover:bg-gray-200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.scrollbar::-webkit-scrollbar {
+	width: 0.3em;
 }
 
-.card {
-  padding: 2em;
+.scrollbar::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
 }
 
-.read-the-docs {
-  color: #888;
+.scrollbar::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 2px solid darkgrey;
+	border-radius: 3px;
 }
