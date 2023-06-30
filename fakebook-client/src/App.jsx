@@ -1,15 +1,51 @@
-import { Route, Routes } from 'react-router';
+import {
+	createBrowserRouter,
+	RouterProvider,
+} from 'react-router-dom';
 import './App.css';
 import { Navbar } from './components';
-import { Profile } from './router';
+import {
+	Profile,
+	Timeline,
+	Friend,
+	Video,
+	Group,
+} from './router';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Navbar />,
+		children: [
+			{
+				path: 'timeline',
+				element: <Timeline />,
+			},
+			{
+				path: 'profile',
+				element: <Profile />,
+			},
+			{
+				path: 'friends',
+				element: <Friend />,
+			},
+			{
+				path: 'videos',
+				element: <Video />,
+			},
+			{
+				path: 'groups',
+				element: <Group />,
+			},
+		],
+	},
+]);
 
 function App() {
 	return (
-		<Routes>
-			<Route path='/' element={<Navbar />}>
-				<Route index element={<Profile />} />
-			</Route>
-		</Routes>
+		<>
+			<RouterProvider router={router} />
+		</>
 	);
 }
 

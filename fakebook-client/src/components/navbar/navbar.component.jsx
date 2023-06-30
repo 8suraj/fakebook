@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router';
-
+import { NavLink, Link } from 'react-router-dom';
+import Notification from '../notification/notification.component';
 export default function Navbar() {
 	return (
 		<>
-			<div className='flex justify-between z-10  bg-white p-2 text-white	sm md lg xl 2xl drop-shadow	sticky top-0 left-0 right-0'>
-				<div className='flex justify-between justify-items-center items-center pl-1.5  w-1/6'>
+			<div className='flex justify-between z-10  bg-white p-2 text-white	sm md lg xl 2xl drop-shadow-2xl	sticky top-0 left-0 right-0 '>
+				<Link className='flex justify-between justify-items-center items-center pl-1.5  w-1/6 '>
 					<div className='flex items-center w-1/5	'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -27,76 +28,136 @@ export default function Navbar() {
 							className='w-11/12 bg-gray-200 border border-gray-200 rounded-full text-gray-800	p-2 pl-3 active:border-gray-200'
 						/>
 					</div>
-				</div>
+				</Link>
 				<div className='flex justify-evenly  w-3/6'>
-					<div className='flex items-center hover:bg-gray-100  rounded-md pr-7 pl-7'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='w-6 h-6 stroke-gray-600'>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'
-							/>
-						</svg>
-					</div>
-					<div className='flex items-center hover:bg-gray-100  rounded-md pr-7 pl-7'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='w-6 h-6 stroke-gray-600'>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z'
-							/>
-						</svg>
-					</div>
-					<div className='flex items-center hover:bg-gray-100  rounded-md pr-7 pl-7'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='w-6 h-6 stroke-gray-600'>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-							/>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z'
-							/>
-						</svg>
-					</div>
-					<div className='flex items-center  hover:bg-gray-100  rounded-md pr-7 pl-7'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='w-6 h-6 stroke-gray-600'>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z'
-							/>
-						</svg>
-					</div>
+					<NavLink
+						to='timeline'
+						path='relative'
+						className={({ isActive }) =>
+							isActive
+								? 'flex items-center  pr-7 pl-7   border-b-4 border-blue-600'
+								: 'flex items-center rounded-md pr-7 pl-7 greyOnHover'
+						}>
+						{({ isActive }) => (
+							<div className='flex items-center '>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									strokeWidth={1.5}
+									stroke='currentColor'
+									className={
+										isActive
+											? 'w-6 h-6   stroke-blue-600'
+											: 'w-6 h-6 stroke-gray-600'
+									}>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'
+									/>
+								</svg>
+							</div>
+						)}
+					</NavLink>
+					<NavLink
+						to='friends'
+						path='relative'
+						className={({ isActive }) =>
+							isActive
+								? 'flex items-center  pr-7 pl-7   border-b-4 border-blue-600'
+								: 'flex items-center rounded-md pr-7 pl-7 greyOnHover'
+						}>
+						{({ isActive }) => (
+							<div className='flex items-center '>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									strokeWidth={1.5}
+									stroke='currentColor'
+									className={
+										isActive
+											? 'w-6 h-6   stroke-blue-600'
+											: 'w-6 h-6 stroke-gray-600'
+									}>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z'
+									/>
+								</svg>
+							</div>
+						)}
+					</NavLink>
+					<NavLink
+						to='videos'
+						path='relative'
+						className={({ isActive }) =>
+							isActive
+								? 'flex items-center  pr-7 pl-7   border-b-4 border-blue-600'
+								: 'flex items-center rounded-md pr-7 pl-7 greyOnHover'
+						}>
+						{({ isActive }) => (
+							<div className='flex items-center '>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									strokeWidth={1.5}
+									stroke='currentColor'
+									className={
+										isActive
+											? 'w-6 h-6   stroke-blue-600'
+											: 'w-6 h-6 stroke-gray-600'
+									}>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+									/>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z'
+									/>
+								</svg>
+							</div>
+						)}
+					</NavLink>
+					<NavLink
+						to='groups'
+						path='relative'
+						className={({ isActive }) =>
+							isActive
+								? 'flex items-center  pr-7 pl-7   border-b-4 border-blue-600'
+								: 'flex items-center rounded-md pr-7 pl-7 greyOnHover'
+						}>
+						{({ isActive }) => (
+							<div className='flex items-center '>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									strokeWidth={1.5}
+									stroke='currentColor'
+									className={
+										isActive
+											? 'w-6 h-6   stroke-blue-600'
+											: 'w-6 h-6 stroke-gray-600'
+									}>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z'
+									/>
+								</svg>
+							</div>
+						)}
+					</NavLink>
 				</div>
-				<div className='flex justify-evenly  pr-1.5 w-1/6'>
-					<div className='flex items-center border border-gray-100 rounded-full bg-gray-200 p-2 hover:bg-gray-300'>
+				<div className='flex justify-evenly  pr-1.5 w-1/6 relative'>
+					<div className='flex items-center rounded-full p-2 greyButtonWithHover'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -111,7 +172,7 @@ export default function Navbar() {
 							/>
 						</svg>
 					</div>
-					<div className='flex items-center border border-gray-100 rounded-full bg-gray-200 p-2 hover:bg-gray-300'>
+					<div className='flex items-center rounded-full p-2 greyButtonWithHover'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -126,7 +187,7 @@ export default function Navbar() {
 							/>
 						</svg>
 					</div>
-					<div className='flex items-center border border-gray-100 rounded-full bg-gray-200 p-2 hover:bg-gray-300'>
+					<div className='flex items-center rounded-full p-2 greyButtonWithHover '>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -141,7 +202,7 @@ export default function Navbar() {
 							/>
 						</svg>
 					</div>
-					<div className='flex items-center border border-gray-200 rounded-full bg-gray-200 p-2 hover:bg-gray-300'>
+					<div className='flex items-center rounded-full p-2 greyButtonWithHover'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -156,6 +217,7 @@ export default function Navbar() {
 							/>
 						</svg>
 					</div>
+					{false && <Notification />}
 				</div>
 			</div>
 			<Outlet />

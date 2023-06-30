@@ -7,6 +7,9 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
+.notificationAbs {
+	transform: translateY(20%);
+}
 /* profilheader */
 .trans {
 	transform: translateY(-5vh);
@@ -20,4 +23,38 @@
 } */
 body {
 	background-color: #f0f2f5;
+}
+.abs50 {
+	transform: translateY(-50%);
+}
+
+.photoGrid {
+	/* @apply xl:w-24 xl:h-24 2xl:w-36 2xl:h-36; */
+	width: calc((100%- (gap-3 * 3)) / 3);
+}
+.profileContainers {
+	@apply border-transparent rounded-lg bg-white flex flex-col p-4 drop-shadow-md	my-4;
+}
+.greyButtonWithHover {
+	@apply border border-gray-100  bg-gray-200  hover:bg-gray-300;
+}
+.greyOnHover {
+	@apply hover:bg-gray-100;
+}
+.greyOnHover1 {
+	@apply hover:bg-gray-200;
+}
+
+.scrollbar::-webkit-scrollbar {
+	width: 0.3em;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 2px solid darkgrey;
+	border-radius: 3px;
 }

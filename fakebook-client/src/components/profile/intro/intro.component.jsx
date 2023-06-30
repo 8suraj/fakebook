@@ -7,7 +7,7 @@ export default function Intro() {
 					Gamers Don&apos;t die!They just respwan
 				</div>
 				<div className='w-full'>
-					<button className='flex items-center justify-center w-full font-bold	 border border-gray-200 rounded-md bg-gray-200 p-2 hover:bg-gray-300'>
+					<button className='flex items-center justify-center w-full font-bold rounded-md	p-2 greyButtonWithHover'>
 						Edit Bio
 					</button>
 				</div>
@@ -55,7 +55,7 @@ export default function Intro() {
 					</div>
 				</div>
 				<div className='w-full'>
-					<button className='flex items-center justify-center w-full font-bold	 border border-gray-200 rounded-md bg-gray-200 p-2 hover:bg-gray-300'>
+					<button className='flex items-center justify-center w-full font-bold rounded-md p-2 greyButtonWithHover'>
 						Edit Details
 					</button>
 				</div>
@@ -172,14 +172,14 @@ export default function Intro() {
 					</div>
 				</div>
 				<div className='w-full'>
-					<button className='flex items-center justify-center w-full font-bold	 border border-gray-200 rounded-md bg-gray-200 p-2 hover:bg-gray-300'>
+					<button className='flex items-center justify-center w-full font-bold rounded-md p-2 greyButtonWithHover'>
 						Edit Hobbies
 					</button>
 				</div>
 			</div>
 			<div className='flex w-full flex-col items-center py-2'>
 				<div className='w-full'>
-					<button className='flex items-center justify-center w-full font-bold	 border border-gray-200 rounded-md bg-gray-200 p-2 hover:bg-gray-300'>
+					<button className='flex items-center justify-center w-full font-bold rounded-md p-2 greyButtonWithHover'>
 						Add Feature
 					</button>
 				</div>

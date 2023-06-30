@@ -3,16 +3,16 @@ import profilePhoto from '../../../assets/image/profilePhoto.jpg';
 
 export default function ProfileHeader() {
 	return (
-		<div className='container bg-white drop-shadow '>
-			<div className='container mx-auto w-9/12  h-[97vh] flex flex-col justify-between py-1'>
-				<div className='h-4/6 w-full border rounded-bl-xl	rounded-br-xl	'>
+		<div className=' w-full bg-white drop-shadow 	'>
+			<div className=' mx-auto w-9/12   flex flex-col justify-between py-1'>
+				<div className=' w-full h-[70vh] border rounded-bl-xl	rounded-br-xl	'>
 					<img
 						src={profileCover}
 						alt=''
 						className='h-full w-full object-cover border rounded-bl-xl	rounded-br-xl	'
 					/>
 				</div>
-				<div className='flex flex-col  items-center '>
+				<div className='flex flex-col  items-center  '>
 					<div className='flex justify-between  w-11/12 '>
 						<div className='flex items-center'>
 							<div className='rounded-full w-40 border-4 border-white trans relative '>
@@ -69,7 +69,7 @@ export default function ProfileHeader() {
 								</svg>
 								Add to story
 							</div>
-							<div className='flex items-center  bg-gray-200 p-1 hover:bg-gray-300 rounded-md  pr-4 pl-4 '>
+							<div className='flex items-center   p-1 rounded-md  pr-4 pl-4  greyButtonWithHover'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									fill='none'
@@ -104,29 +104,29 @@ export default function ProfileHeader() {
 					</div>
 					<div className='flex justify-between border-t border-gray-300 py-1 w-11/12'>
 						<div className='flex justify-between w-4/6 '>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5 '>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5 '>
 								Posts
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								About
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								Friends
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								Photos
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								Videos
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								Check-ins
 							</div>
-							<div className='flex items-center  hover:bg-gray-100  rounded-md pr-5 pl-5'>
+							<div className='flex items-center  greyOnHover  rounded-md pr-5 pl-5'>
 								More
 							</div>
 						</div>
-						<div className='flex items-center border border-gray-200 rounded-lg bg-gray-200 p-2 hover:bg-gray-300'>
+						<div className='flex items-center  rounded-lg p-2 greyButtonWithHover'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'

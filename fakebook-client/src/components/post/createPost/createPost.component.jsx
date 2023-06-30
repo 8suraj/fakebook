@@ -1,7 +1,7 @@
 import profilePhoto from '../../../assets/image/profilePhoto.jpg';
 export default function CreatePost() {
 	return (
-		<div className=' border-transparent rounded-lg bg-white flex flex-col p-4 drop-shadow-md	my-4'>
+		<div className=' profileContainers'>
 			<div className='flex flex-row w-full  justify-center items-center my-4'>
 				<div className='rounded-full w-1/12  '>
 					<img
@@ -19,7 +19,7 @@ export default function CreatePost() {
 				</div>
 			</div>
 			<div className='flex justify-around  border-t border-gray-300 py-1 px-8'>
-				<div className='flex items-center   hover:bg-gray-100 rounded-md p-2 pr-6 pl-6 '>
+				<div className='flex items-center   greyOnHover rounded-md p-2 pr-6 pl-6 '>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -34,7 +34,7 @@ export default function CreatePost() {
 					</svg>
 					Live Video
 				</div>
-				<div className='flex items-center   hover:bg-gray-100 rounded-md p-2 pr-6 pl-6 '>
+				<div className='flex items-center   greyOnHover rounded-md p-2 pr-6 pl-6 '>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -49,7 +49,7 @@ export default function CreatePost() {
 					</svg>
 					Photo/Video
 				</div>
-				<div className='flex items-center   hover:bg-gray-100 rounded-md p-2 pr-6 pl-6 '>
+				<div className='flex items-center   greyOnHover rounded-md p-2 pr-6 pl-6 '>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
